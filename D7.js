@@ -1,37 +1,47 @@
 /* ESERCIZIO 1
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
-*/
+
 const firstString = "firstString";
 const secondString = "secondString";
-const thirdString = (firstString, secondString) => firstString.slice(0, 1) + secondString.slice(-3).toUpperCase;
+const thirdString = () => firstString.slice(0, 1) + secondString.slice(-3).toUpperCase;
 console.log(thirdString);
-
+*/
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
-*/
-const numbers = [];
-for (let i = 0; i < 10; i++) {
-  numbers.push((i = Math.random > 0) && (i = Math.random <= 100));
-}
-console.log(numbers);
 
+const randomNumbers = [];
+for (let i = 0; i < 10; i++) {
+  randomNumbers.push((i = Math.random > 0) && (i = Math.random <= 100));
+}
+console.log(randomNumbers);
+*/
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+const numbers = [];
+for (let i = 0; i < 20; i++) {
+  numbers.push(i + 1);
+}
+console.log(numbers);
+const evenNumbers = numbers.filter((evenNumber) => evenNumber % 2 === 0);
+console.log(evenNumbers);
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
-*/
 
+adds.forEach (numbers +i,)=> 
+*/
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
-*/
 
+const mappedNumbers = numbers.map((n = 4))((number) => number + n);
+console.log(mappedNumbers);
+*/
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
@@ -41,7 +51,7 @@ console.log(numbers);
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
-/* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
+/* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :)
 const movies = [
   {
     Title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -142,7 +152,7 @@ const movies = [
     Poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
 ];
-
+ */
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
