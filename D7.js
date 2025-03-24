@@ -182,13 +182,13 @@ movies.forEach(movieIndex) => {console.log (i)};
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 
-const mappedMovies = movies.Title.map((movie) => movie.Title);
+const mappedMovies = movies.map(obj => obj.Title);
 console.log(mappedMovies);
 */
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
-
+const millennial = movies.map((obj) => obj.Year);
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
