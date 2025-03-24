@@ -7,18 +7,28 @@ const secondString = "secondString";
 const thirdString = () => firstString.slice(0, 1) + secondString.slice(-3).toUpperCase;
 console.log(thirdString);
 */
+const unifyStrings = function (str1, str2) {
+  const unified = str1.substring(0, 2) + str2.substring(str2.lenght - 3);
+  return unified.toUpperCase();
+};
+const newStr = unifyStrings("Ciao", "ragazzi");
+console.log(newStr);
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
-
-const randomNumbers = [];
-for (let i = 0; i < 10; i++) {
-  randomNumbers.push((i = Math.random > 0) && (i = Math.random <= 100));
-}
-console.log(randomNumbers);
 */
+const randomNumbers = function () {
+  const arrOfNums = [];
+  for (let i = 0; i < 10; i++) {
+    const random = Math.floor(Math.random() * 101);
+    arrOfNums.push(random);
+  }
+  return arrOfNums;
+};
+const tenRandomNumbers = randomNumbers();
+console.log(tenRandomNumbers);
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
-*/
+
 const numbers = [];
 for (let i = 0; i < 20; i++) {
   numbers.push(i + 1);
@@ -26,11 +36,32 @@ for (let i = 0; i < 20; i++) {
 console.log(numbers);
 const evenNumbers = numbers.filter((evenNumber) => evenNumber % 2 === 0);
 console.log(evenNumbers);
+*/
+const getEven = function (array) {
+  const onlyEven = array.filter((num) => num % 2 === 0);
+  return onlyEven;
+};
 
+console.log(getEven(tenRandomNumbers));
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 
 adds.forEach (numbers +i,)=> 
+*/
+/*  For
+const sumNums = function (array) {
+  let sum = 0;
+  for (let i = 0; i < array.lenght; i++) {
+    const num = array[i];
+    sum += num;
+  }
+};
+sumNums(tenRandomNumbers);
+*/
+/*forEach
+array.forEach((num) => (sum += num));
+console.log("SUM", sum);
+sumNums(tenRandomNumbers);
 */
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -42,11 +73,20 @@ adds.forEach (numbers +i,)=>
 const mappedNumbers = numbers.map((n = 4))((number) => number + n);
 console.log(mappedNumbers);
 */
+const incrementedByN = function (array, n) {
+  const incremented = array.map((num) => num + n);
+  return incremented;
+};
+console.log(incrementedByN(tenRandomNumbers, 10));
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-
+const getLenght = function (array) {
+  const lengthed = array.map((str) => str.lenght);
+  return lengthed;
+};
+console.log(getLenght(["EPICODE", "is", "great"]));
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 
@@ -196,7 +236,11 @@ const millennial = movies.map((obj) => obj.Year);
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
-
+const getFromID = function (imdbID) {
+  const filmFromID = movies.find((film) => film.imdbID === imdbID);
+  return filmFromID;
+};
+console.log(filmFromID);
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
