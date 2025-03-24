@@ -49,9 +49,21 @@ console.log(mappedNumbers);
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
-*/
 
+const newNumbers = [];
+for (let i = 0; i < 100; i++) {
+  newNumbers.push(i + 1);
+}
+console.log(newNumbers);
+const newNumber = newNumbers[i];
+
+oddsNumbers.forEach((newNumber) => {
+  newNumber % 2 > 0;
+});
+console.log(oddsNumbers);
+*/
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :)
+ */
 const movies = [
   {
     Title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -152,19 +164,27 @@ const movies = [
     Poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
 ];
- */
+
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
-*/
 
+for (let i = 0; i < movies.length; i++);
+const movie = movies[i];
+const benchmarkYear = movie[1].Year;
+console.log(benchmarkYear);
+*/
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
-*/
 
+const movieIndex = [i];
+movies.forEach(movieIndex) => {console.log (i)};
+*/
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
-*/
 
+const mappedMovies = movies.Title.map((movie) => movie.Title);
+console.log(mappedMovies);
+*/
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
